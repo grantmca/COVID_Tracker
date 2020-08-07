@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+{% load static %}
+<br>
+  <div class="buttons", style="margin-left:-200px;">
+
+    <div class="button-group">
+<!--      <a href="{% url 'display_all' %}" class="btn btn-primary btn-md btn-trim" role="button">Display All</a>-->
+      <a href="{% url 'add_case' %}" class="btn btn-primary btn-md btn-trim" role="button">Add Case</a>
+    </div>
+
+  </div>
+<br>
+
+  <table id="myTable" class="table table-hover", style="margin-top:10px; margin-left:-200px; width:100%">
+    <thead>
+      <tr>
+        <th onclick="sortTableDate(0)">Encounter Date</th>
+        <th onclick="sortTable(1)">Team Member</th>
+        <th onclick="sortTable(2)">Company</th>
+        <th onclick="sortTable(3)">Badge Number</th>
+        <th onclick="sortTable(4)">Shop</th>
+        <th onclick="sortTable(5)">Line</th>
+        <th onclick="sortTable(6)">Shift</th>
+        <th onclick="sortTableDate(7)">Last Day Worked</th>
+        <th onclick="sortTable(8)">Concern</th>
+        <th onclick="sortTable(9)">Discription</th>
+        <th onclick="sortTable(10)">Close Contacts</th>
+        <th onclick="sortTable(11)">Manager</th>
+        <th onclick="sortTableDate(12)">Test Date</th>
+        <th onclick="sortTableDate(13)">Results Date</th>
+        <th onclick="sortTable(14)">Test Location</th>
+        <th onclick="sortTable(15)">Test Status</th>
+        <th onclick="sortTable(16)">Case Closed?</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    {% load getattribute %}
+    {% for person in persons %}
+
+      <tr>
+        <td>
+          {% for case in person.Team_Member.all %}
+            {% if forloop.first %}
+              {{ case.encounter_date }}
+            {% endif %}
+          {% endfor %}
+        </td>
+        <td>{{person.name}}</td>
+        <td>{{person.company}}</td>
+        <td>{{person.badge_number}}</td>
+        <td>{{person.shop}}</td>
+        <td>{{person.line}}</td>
+        <td>{{person.shift}}</td>
+        <td>
+          {% for case in person.Team_Member.all %}
+            {% if forloop.first %}
+              {{ case.last_day_worked }}
+            {% endif %}
+          {% endfor %}
+        </td>
+        <td>
+          {% for case in person.Team_Member.all %}
+            {% if forloop.first %}
+              {{ case.concern }}
+            {% endif %}
+          {% endfor %}
+        </td>
+        <td>
+        {% for case in person.Team_Member.all %}
+            {% if forloop.first %}
+              {{ case.discription }}
+            {% endif %}
+         {% endfor %}
+        </td>
+        <td>
+        {% for case in person.Team_Member.all %}
+            {% if forloop.first %}
+              {% for member in case.close_contact.all %}
+                {{ member.name }}
+              {% endfor %}
+            {% endif %}
+         {% endfor %}
+        </td>
+        <td>
+        {% for case in person.Team_Member.all %}
+            {% if forloop.first %}
+              {{ case.manager.name }}
+            {% endif %}
+        {% endfor %}
+        </td>
+        <td>
+        {% for case in person.Team_Member.all %}
+            {% if forloop.first %}
+              {% for test in case.Test_Case.all %}
+                {% if forloop.first %}
+                  {{ test.test_date }}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+        {% endfor %}
+        </td>
+        <td>
+        {% for case in person.Team_Member.all %}
+            {% if forloop.first %}
+              {% for test in case.Test_Case.all %}
+                {% if forloop.first %}
+                  {{ test.results_date }}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+        {% endfor %}
+        </td>
+        <td>
+        {% for case in person.Team_Member.all %}
+            {% if forloop.first %}
+              {% for test in case.Test_Case.all %}
+                {% if forloop.first %}
+                  {{ test.results_date }}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+        {% endfor %}
+        </td>
+        <td>
+        {% for case in person.Team_Member.all %}
+            {% if forloop.first %}
+              {% for test in case.Test_Case.all %}
+                {% if forloop.first %}
+                  {{ test.results_date }}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+        {% endfor %}
+        </td>
+        <td>
+        {% for case in person.Team_Member.all %}
+            {% if forloop.first %}
+              {{ case.case_closed }}
+            {% endif %}
+         {% endfor %}
+        </td>
+      </tr>
+
+    {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

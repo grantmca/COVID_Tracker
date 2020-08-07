@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<br>
+  <div class="container-fluid">
+    <form method="POST" action="">
+    {% csrf_token %}
+      <div class="row spacer">
+      <div class="col-2">
+          <label>{{personform.name.label}}</label>
+      </div>
+      <div class="col-4">
+          <div class="input-group">
+              {{personform.name}}
+          </div>
+      </div>
+      </div>
+        <div class="row spacer">
+      <div class="col-2">
+          <label>{{personform.phone_number.label}}</label>
+      </div>
+      <div class="col-4">
+          <div class="input-group">
+              {{personform.phone_number}}
+          </div>
+      </div>
+
+</div>
+      <div class="row spacer">
+      <div class="col-2">
+          <label>{{personform.company.label}}</label>
+      </div>
+      <div class="col-4">
+          <div class="input-group">
+              {{personform.company}}
+          </div>
+      </div>
+      </div>
+      <div class="row spacer">
+      <div class="col-2">
+          <label>{{personform.badge_number.label}}</label>
+      </div>
+      <div class="col-4">
+          <div class="input-group">
+              {{personform.badge_number}}
+          </div>
+      </div>
+      </div>
+      <div class="row spacer">
+      <div class="col-2">
+          <label>{{personform.shop.label}}</label>
+      </div>
+      <div class="col-4">
+          <div class="input-group">
+              {{personform.shop}}
+          </div>
+      </div>
+      </div>
+      <div class="row spacer">
+      <div class="col-2">
+          <label>{{personform.line.label}}</label>
+      </div>
+      <div class="col-4">
+          <div class="input-group">
+              {{personform.line}}
+          </div>
+      </div>
+      </div>
+      <div class="row spacer">
+      <div class="col-2">
+          <label>{{personform.shift.label}}</label>
+      </div>
+      <div class="col-4">
+          <div class="input-group">
+              {{personform.shift}}
+          </div>
+      </div>
+      </div>
+
+
+      {{ caseformset.management_form }}
+      {% for form in caseformset %}
+      <div class="row spacer">
+      <div class="col-2">
+          <label>{{form.encounter_date.label}}</label>
+      </div>
+      <div class="col-4">
+          <div class="input-group">
+              {{form.encounter_date}}
+          </div>
+      </div>
+      </div>
+      <div class="row spacer">
+      <div class="col-2">
+          <label>{{form.concern.label}}</label>
+      </div>
+      <div class="col-4">
+          <div class="input-group">
+              {{form.concern}}
+          </div>
+      </div>
+      </div>
+      <div class="row spacer">
+      <div class="col-2">
+          <label>{{form.discription.label}}</label>
+      </div>
+      <div class="col-4">
+          <div class="input-group">
+              {{form.discription}}
+          </div>
+      </div>
+      </div>
+      <div class="row spacer">
+      <div class="col-2">
+          <label>{{form.last_day_worked.label}}</label>
+      </div>
+      <div class="col-4">
+          <div class="input-group">
+              {{form.last_day_worked}}
+          </div>
+      </div>
+      </div>
+      <div class="row spacer">
+      <div class="col-2">
+          <label>{{form.case_closed.label}}</label>
+      </div>
+      <div class="col-4">
+          <div class="input-group">
+              {{form.case_closed}}
+          </div>
+      </div>
+      </div>
+      {% endfor %}
+
+      {{ testformset.management_form }}
+      {% for form in testformset %}
+      <div class="row spacer">
+      <div class="col-2">
+          <label>{{form.test_date.label}}</label>
+      </div>
+      <div class="col-4">
+          <div class="input-group">
+              {{form.test_date}}
+          </div>
+      </div>
+      </div>
+      <div class="row spacer">
+      <div class="col-2">
+          <label>{{form.results_date.label}}</label>
+      </div>
+      <div class="col-4">
+          <div class="input-group">
+              {{form.results_date}}
+          </div>
+      </div>
+      </div>
+      <div class="row spacer">
+      <div class="col-2">
+          <label>{{form.location.label}}</label>
+      </div>
+      <div class="col-4">
+          <div class="input-group">
+              {{form.location}}
+          </div>
+      </div>
+      </div>
+      <div class="row spacer">
+      <div class="col-2">
+          <label>{{form.test_status.label}}</label>
+      </div>
+      <div class="col-4">
+          <div class="input-group">
+              {{form.test_status}}
+          </div>
+      </div>
+      </div>
+      {% endfor %}
+
+      {{ managerformset.management_form }}
+      {% for form in managerformset %}
+
+      <div class="row spacer">
+      <div class="col-2">
+          <label>Manager</label>
+      </div>
+      <div class="col-4">
+          <div class="input-group">
+              {{form.name}}
+          </div>
+      </div>
+      </div>
+
+      {% endfor %}
+
+      {{ closeformset.management_form }}
+        {% for form in closeformset %}
+        <div class="row form-row spacer">
+            <div class="col-2">
+                <label>Close Contact</label>
+            </div>
+            <div class="col-4">
+                <div class="input-group">
+                    {{form.name}}
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-success add-form-row">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+      <div class="row spacer">
+          <div class="col-4 offset-2">
+              <button type="submit" class="btn btn-block btn-primary">Create</button>
+          </div>
+      </div>
+    </form>
+  </div>
+
+{% endblock %}
+

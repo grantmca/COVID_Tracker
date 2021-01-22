@@ -9,10 +9,10 @@ class Person(models.Model):
     phone_number = models.CharField('Phone number', max_length=10, blank=True, default='')
 
     COMPANY_LIST = (
-        ('MBUSI', 'MBUSI'),
-        ('Onin', 'Onin'),
-        ('NAOS', 'NAOS'),
+        ('Internal', 'Internal'),
+        ('External', 'External'),
         ('Contractor', 'Contractor'),
+        ('Other', 'Other'),
     )
     company = models.CharField('Company (MBUSI, NAOS, etc.)',
                                choices=COMPANY_LIST,

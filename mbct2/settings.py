@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'searchableselect',
-    'better_filter_widget',
+    # 'searchableselect',
+    # 'better_filter_widget',
 ]
 
 MIDDLEWARE = [

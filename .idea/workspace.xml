@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df61f587-097b-4164-b7a6-80b1ea8aeca4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/rSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mbct2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mbct2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mbct2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mbct2/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracking/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracking/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1594762851729</updated>
       <workItem from="1597878613126" duration="2033000" />
-      <workItem from="1611279947643" duration="621000" />
+      <workItem from="1611279947643" duration="931000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="df61f587-097b-4164-b7a6-80b1ea8aeca4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracking/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracking/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +52,8 @@
       <option name="presentableId" value="Default" />
       <updated>1594762851729</updated>
       <workItem from="1597878613126" duration="2033000" />
-      <workItem from="1611279947643" duration="931000" />
+      <workItem from="1611279947643" duration="2502000" />
+      <workItem from="1616630699320" duration="1018000" />
     </task>
     <servers />
   </component>
@@ -62,9 +65,10 @@
       <screen x="0" y="23" width="1680" height="966" />
     </state>
     <state x="304" y="165" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.966@0.23.1680.966" timestamp="1611280512127" />
-    <state x="517" y="335" key="com.intellij.ide.util.TipDialog" timestamp="1611279947961">
-      <screen x="0" y="23" width="1680" height="966" />
+    <state x="517" y="338" key="com.intellij.ide.util.TipDialog" timestamp="1616630699737">
+      <screen x="0" y="23" width="1680" height="975" />
     </state>
+    <state x="517" y="338" key="com.intellij.ide.util.TipDialog/-1920.23.1920.1057/1680.121.1440.877/0.23.1680.975@0.23.1680.975" timestamp="1616630699737" />
     <state x="517" y="335" key="com.intellij.ide.util.TipDialog/0.23.1680.966@0.23.1680.966" timestamp="1611279947961" />
   </component>
 </project>

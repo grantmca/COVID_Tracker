@@ -14,17 +14,16 @@ class Person(models.Model):
         ('Contractor', 'Contractor'),
         ('Other', 'Other'),
     )
-    company = models.CharField('Company (MBUSI, NAOS, etc.)',
+    company = models.CharField('Company (Main etc.)',
                                choices=COMPANY_LIST,
                                max_length=24,
-                               blank=True,
-                               default='MBUSI')
+                               blank=True)
 
     badge_number = models.IntegerField('Employee ID Badge Number', unique=True, blank=True, null=True)
 
-    shop = models.CharField('Plant (Admin, A1, etc.)', max_length=24, blank=True, default='')
+    shop = models.CharField('Plant (Admin, etc.)', max_length=24, blank=True, default='')
 
-    line = models.CharField('Work Area or line (Trim 2, HR, etc.)', max_length=24, blank=True, default='')
+    line = models.CharField('Work Area or line (HR, etc.)', max_length=24, blank=True, default='')
     SHIFT_LIST = (
         ('A', 'A'),
         ('B', 'B'),
@@ -33,8 +32,7 @@ class Person(models.Model):
     shift = models.CharField('Shift (A, B, C)',
                                choices=SHIFT_LIST,
                                max_length=1,
-                               blank=True,
-                               default='A')
+                               blank=True)
 
 
     def notempty(self):
